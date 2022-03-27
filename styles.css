@@ -1,0 +1,15 @@
+.sketchArea {
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+    width: 800px;
+    height: 800px;
+}
+
+.sketchArea>* {
+    border: 1px solid gray;
+}
+
+.sketchArea>*:hover{
+    background-color: black;
+}
