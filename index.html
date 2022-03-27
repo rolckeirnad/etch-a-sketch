@@ -9,22 +9,24 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>Etch a Sketch</h1>
-    </div>
-    <form class="optionsContainer">
-        <label for="size">Grid size: </label>
-        <input type="number" name="size" id="newGridSize" value="16" min="16" max="100">
-        <button type="button" id="setButton">Set</button>
-        <button type="button" id="resetButton">Reset</button>
-    </form>
     <div class="sketchContainer">
-        <div class="sketchArea">
-            <!-- Put grid area here -->
+        <div class="header">
+            <h1>Etch a Sketch</h1>
+            <form class="optionsContainer">
+                <label for="size">Grid size: </label>
+                <input type="number" name="size" id="newGridSize" value="16" min="16" max="100">
+                <button type="button" id="setButton">Set</button>
+                <button type="button" id="resetButton">Reset</button>
+            </form>
         </div>
-    </div>
-    <div class="footer">
-        Copyright ©
+        <div class="sketchArea sketchText">
+            Click on Set button for start sketching
+        </div>
+        <div class="footer">
+            <div class="controls"></div>
+            <a href="https://github.com/rolckeirnad/etch-a-sketch">Click here to go to gitHub</a>
+            <div class="controls"></div>
+        </div>
     </div>
 </body>
 
