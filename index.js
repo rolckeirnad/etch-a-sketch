@@ -1,6 +1,17 @@
 const gridContainer = document.querySelector('.sketchArea');
+const usrInput = document.querySelector('#newGridSize');
+const setButton = document.querySelector('#setButton');
+const resetButton = document.querySelector('#resetButton');
+
+setButton.addEventListener('click', e => setGridSize(+usrInput.value));
+resetButton.addEventListener('click', clearGrid);
 
 function setGridSize(size) {
+    if (size > 100 || size < 16) {
+        gridContainer.textContent = "Please enter a grid size number between 16 and 100";
+        return;
+    }
+    removeGrid();
     const r = document.querySelector(':root');
     r.style.setProperty('--total-elements', size);
 
