@@ -8,10 +8,14 @@ resetButton.addEventListener('click', clearGrid);
 
 function setGridSize(size) {
     if (size > 100 || size < 16) {
+        const r = document.querySelector(':root');
+        r.style.setProperty('--total-elements', 1);
+        gridContainer.classList.add('sketchText');
         gridContainer.textContent = "Please enter a grid size number between 16 and 100";
         return;
     }
     removeGrid();
+    gridContainer.classList.remove('sketchText');
     const r = document.querySelector(':root');
     r.style.setProperty('--total-elements', size);
 
