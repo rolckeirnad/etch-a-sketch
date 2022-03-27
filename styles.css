@@ -1,33 +1,19 @@
+:root {
+    --total-elements: 16;
+}
+
 .sketchArea {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(var(--total-elements), 1fr);
+    grid-template-rows: repeat(var(--total-elements), 1fr);
     width: 800px;
     height: 800px;
 }
 
 .gridElement {
     border: 1px solid gray;
-    animation-name: hoverColor;
-    animation-duration: 1ms;
-    animation-play-state: paused;
-    animation-fill-mode: forwards;
 }
 
-.gridElement:active, 
-.gridElement:focus, 
-.gridElement:hover {
-    animation-play-state: running;
-}
-
-@keyframes hoverColor {
-    0% {
-        opacity: 1;
-        background-color: white;
-    }
-
-    100% {
-        opacity: 1;
-        background-color: black;
-    }
+.hoveredElement {
+    background-color: black;
 }
